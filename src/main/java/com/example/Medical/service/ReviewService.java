@@ -1,6 +1,5 @@
 package com.example.Medical.service;
 
-
 import com.example.Medical.DTO.RequestDTO;
 import com.example.Medical.entity.Doctor;
 import com.example.Medical.entity.Review;
@@ -11,6 +10,7 @@ import com.example.Medical.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -61,5 +61,10 @@ public class ReviewService {
         doctor.setRating(averageRating);
 
         doctorRepository.save(doctor);
+    }
+
+    public List<Review> getAllReviews(Long doctorId){
+
+        return reviewRepository.findByDoctorId(doctorId);
     }
 }

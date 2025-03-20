@@ -27,4 +27,6 @@ public class Review {
     @JoinColumn(name = "patientId", referencedColumnName = "id")
     private Users patient;
 
+
+
 }

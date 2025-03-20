@@ -28,4 +28,10 @@ public class RequestDTO {
     private Long patientId;
     private String comment;
 
+    //For message
+    private Long chatId;
+    private Long senderId;
+    private String messageContent;
+
+
 }
