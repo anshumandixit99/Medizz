@@ -6,21 +6,19 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
-public class DoctorSearchDTO {
+public class DoctorSignupDTO {
 
+    private String name;
     private String specialization;
     private String city;
     private String locality;
-    private Boolean available;
-    private Integer minExperience;
-    private Double minFee;
-    private Double maxFee;
-    private Double minRating;
+    private Integer experience;
+    private Double fee;
+    private Double rating;
     private String gender;
     private List<String> symptoms;
     private String clinicName;
+    private Boolean available;
     private String consultationType;
-    private String availableOption;
-    private LocalDateTime chosenDate;
-
+    private LocalDateTime availabilityTime;
 }

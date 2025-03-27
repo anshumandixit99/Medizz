@@ -1,6 +1,5 @@
 package com.example.Medical.entity;
 
-
 import jakarta.persistence.*;
 import lombok.Data;
 

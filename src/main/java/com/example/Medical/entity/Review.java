@@ -15,6 +15,7 @@ public class Review {
     private Long id;
 
     private Double rating;
+
     private String comment;
 
     @ManyToOne

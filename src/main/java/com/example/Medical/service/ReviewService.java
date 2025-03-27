@@ -21,6 +21,7 @@ public class ReviewService {
 
     @Autowired
     private UserRepository userRepository;
+
     @Autowired
     private DoctorRepository doctorRepository;
 
@@ -64,7 +65,6 @@ public class ReviewService {
     }
 
     public List<Review> getAllReviews(Long doctorId){
-
         return reviewRepository.findByDoctorId(doctorId);
     }
 }

@@ -1,5 +1,6 @@
 package com.example.Medical.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -36,5 +37,6 @@ public class Doctor {
     private LocalDateTime availabilityTime;
 
     @OneToMany(mappedBy = "doctor",cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Review> reviews;
 }

@@ -1,6 +1,7 @@
 package com.example.Medical.service;
 
 import com.example.Medical.DTO.DoctorSearchDTO;
+import com.example.Medical.DTO.DoctorSignupDTO;
 import com.example.Medical.Specification.DoctorSpecification;
 import com.example.Medical.entity.Doctor;
 import com.example.Medical.repository.DoctorRepository;
@@ -31,5 +32,24 @@ public class DoctorService {
                 .and(DoctorSpecification.isAvailable(request.getAvailable()))
                 .and(DoctorSpecification.hasConsultationType(request.getConsultationType()));
         return doctorRepository.findAll(spec);
+    }
+
+    public Doctor signupDoctor(DoctorSignupDTO doctorSignupDTO) {
+        Doctor doctor = new Doctor();
+        doctor.setName(doctorSignupDTO.getName());
+        doctor.setSpecialization(doctorSignupDTO.getSpecialization());
+        doctor.setCity(doctorSignupDTO.getCity());
+        doctor.setLocality(doctorSignupDTO.getLocality());
+        doctor.setExperience(doctorSignupDTO.getExperience());
+        doctor.setFee(doctorSignupDTO.getFee());
+        doctor.setRating(doctorSignupDTO.getRating());
+        doctor.setGender(doctorSignupDTO.getGender());
+        doctor.setSymptoms(doctorSignupDTO.getSymptoms());
+        doctor.setClinicName(doctorSignupDTO.getClinicName());
+        doctor.setAvailable(doctorSignupDTO.getAvailable());
+        doctor.setConsultationType(doctorSignupDTO.getConsultationType());
+        doctor.setAvailabilityTime(doctorSignupDTO.getAvailabilityTime());
+
+        return doctorRepository.save(doctor);
     }
 }

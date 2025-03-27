@@ -3,8 +3,7 @@ package com.example.Medical.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 
 @Data
@@ -23,7 +22,7 @@ public class MedicalCenter {
     private String fullAddress;
 
     @OneToMany(mappedBy = "medicalCenter", cascade = CascadeType.ALL)
-    private Map<String, String> timings = new HashMap<>();
+    private List<MedicalCenterTimings> timings;
 
     private String googleMapLocation;
 
