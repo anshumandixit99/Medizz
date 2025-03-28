@@ -1,0 +1,12 @@
+added the functionality of registration of patient,
+fixed the apis of registration of patient,
+Updated the search filter for doctors,
+updated the apis of filter search,
+tested the apis of filter search,
+created a config file for live chat with new modification.
+
+
+Updated the Bills repository class,
+Updated the Bill service method,
+updated the bills in two section for flat,
+created new service method to calculate the reserve fund.
